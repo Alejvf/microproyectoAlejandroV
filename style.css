@@ -23,7 +23,6 @@ body{
     width: 100%;
     height: 60px;
     background: #001219;
-    border-bottom: 1px solid #dfdfdf;
     display: flex;
     justify-content: center;
     padding: 5px 0;
@@ -65,3 +64,104 @@ body{
     font-size: medium;
     text-align: center;
 }
+
+.main{
+    width: 100%;
+    padding: 40px 0;
+    justify-content: center;
+    margin-top: 20px;
+    background-color:#ffe8d6; 
+}
+
+.slider{
+    position:relative;
+    height:100vh;
+    width:100%;
+}
+
+.slider .slides{
+    position:absolute;
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    opacity:0;
+    transition:0.3s ease-in-out;
+}
+.slider .slides.current{
+  z-index:1;
+  opacity:1;
+}
+.slider .slides:nth-child(1){
+  background-image: url(img/photo_2022-02-12_11-31-01.jpg);
+  background-size:cover;
+  background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.slider .slides:nth-child(2){
+  background-image: url(img/photo_2022-02-12_11-24-49.jpg);
+  background-size:cover;
+  background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.slider .slides:nth-child(3){
+  background-image: url(img/photo_2022-02-12_11-24-51.jpg);
+  background-size:cover;
+  background-attachment:fixed;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.slider .slides:nth-child(4){
+    background-image: url(img/photo_2022-02-12_11-24-53.jpg);
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.prev{
+    position:absolute;
+    color:#ffe8d6;
+    top:50%;
+    left:5%;
+    z-index:99;
+    font-size:2em;
+    font-weight:600;
+    padding:10px 17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    background-color: #001219;
+    opacity: 70%;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 20px;
+  }
+  
+  .next{
+    position:absolute;
+    color:#ffe8d6;
+    top:50%;
+    right:5%;
+    z-index:99;
+    font-size:2em;
+    font-weight:600;
+    padding:10px 17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    background-color: #001219;
+    opacity: 70%;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 20px;
+  }
